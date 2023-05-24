@@ -13,7 +13,7 @@ class Enseignant
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private int $id ;
 
     #[ORM\Column(length: 50)]
     private ?string $nom = null;
@@ -32,7 +32,7 @@ class Enseignant
         $this->modules = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }

@@ -13,7 +13,7 @@ class Semestre
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private int $id ;
 
     #[ORM\Column(length: 30)]
     private ?string $nom = null;
@@ -26,7 +26,7 @@ class Semestre
         $this->modules = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }

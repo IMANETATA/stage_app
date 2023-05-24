@@ -11,7 +11,7 @@ class Note
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private int $id ;
 
     #[ORM\Column]
     private ?float $note = null;
@@ -21,13 +21,13 @@ class Note
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?etudiant $etudiant = null;
+    private etudiant $etudiant ;
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     #[ORM\JoinColumn(nullable: false)]
     private ?module $module = null;
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -56,7 +56,7 @@ class Note
         return $this;
     }
 
-    public function getEtudiant(): ?etudiant
+    public function getEtudiant(): etudiant
     {
         return $this->etudiant;
     }

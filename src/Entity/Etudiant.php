@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\EtudiantRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: EtudiantRepository::class)]
@@ -13,7 +14,8 @@ class Etudiant
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    #[assert\NotNull()]
+    protected int $id ;
 
     #[ORM\Column(length: 50)]
     private ?string $nom = null;
@@ -35,11 +37,12 @@ class Etudiant
         $this->notes = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
+    
     public function getNom(): ?string
     {
         return $this->nom;
@@ -116,5 +119,15 @@ class Etudiant
         }
 
         return $this;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id):void
+    {
+        $this->id = $id;
     }
 }
