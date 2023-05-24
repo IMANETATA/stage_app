@@ -21,11 +21,11 @@ class Note
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     #[ORM\JoinColumn(nullable: false)]
-    private etudiant $etudiant ;
+    private Etudiant $etudiant ;
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?module $module = null;
+    private ?Module $module = null;
 
     public function getId(): int
     {
