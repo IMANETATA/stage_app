@@ -35,7 +35,6 @@
 								<div class="form-group">
 									<div class="form-widget">
 										<i class="fas fa-search content-search-icon"></i>
-
 										<label class="content-search-label" data-value="{{ app.request.get('query') }}">
 											<input style="margin:10px;padding:10px;" class="form-control {{ app.request.get('query') is null ? 'is-blank' }}" type="search" name="query" value="{{ app.request.get('query') ?? '' }}" placeholder="{{ 'action.search'|trans(ea.i18n.translationParameters, 'EasyAdminBundle') }}" spellcheck="false" autocorrect="false" oninput="this.parentNode.dataset.value=this.value">
 										</label>
@@ -72,9 +71,6 @@
 				{# fin de la modification #}
 
 			</div>
-
-
-
 		</div>
 	</div>
 

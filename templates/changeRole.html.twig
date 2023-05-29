@@ -2,12 +2,12 @@
 #listeRoles {
 
          margin:auto;
-         margin-top:20px;
+         margin-top:30px;
 }
 
 </style>
 {% set roles = app.user.getroles(TRUE) %}
-{% if roles|length > 2 %}
+{% if roles|length > 1 %}
     <select id="listeRoles">
         {% for a in roles %}
             {% if a != 'ROLE_USER' %}

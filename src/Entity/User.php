@@ -125,7 +125,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->locale;
     }
 
-    public function setLocale(string $locale): self
+    public function setLocale(?string $locale): self
     {
         $this->locale = $locale;
 
