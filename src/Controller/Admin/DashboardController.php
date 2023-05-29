@@ -89,13 +89,17 @@ class DashboardController extends AbstractDashboardController
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linkToCrud('Filiere', 'fas fa-list', Filiere::class);
 
+        if($this->current_role == "ROLE_ADMIN" ){
         yield MenuItem::linkToCrud('Semestre', 'fas fa-list', Semestre::class);
+        }
+
         yield MenuItem::linkToCrud('Enseignant', 'fas fa-list', Enseignant::class);
         yield MenuItem::linkToCrud('Module', 'fas fa-list', Module::class);
         yield MenuItem::linkToCrud('Etudiant', 'fas fa-list', Etudiant::class);
         yield MenuItem::linkToCrud('Note', 'fas fa-list', Note::class);
 
-
+        if($this->current_role == "ROLE_ADMIN" ){
         yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
+        }
     }
 }

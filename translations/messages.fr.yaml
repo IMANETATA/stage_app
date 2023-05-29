@@ -1,3 +1,9 @@
+ROLE_USER: Utilisateur
+ROLE_APOGE: Service APOGE
+ROLE_ADMIN: Administrateur
+ROLE_PROF: Professeur
+ROLE_ETUDIANT: Etudiant
+ROLE_CHEF: Chef de Filière
 
 Etudiants: Etudiants
 Filieres: Filières

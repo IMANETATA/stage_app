@@ -1,3 +1,9 @@
+ROLE_USER: Usuario
+ROLE_APOGE: APOGE
+ROLE_ADMIN: Administrador
+ROLE_PROF: Profesor
+ROLE_ETUDIANT: Estudiante
+ROLE_CHEF: Jefe de Rama
 
 Etudiants: Estudiantes
 Filieres: Ramas

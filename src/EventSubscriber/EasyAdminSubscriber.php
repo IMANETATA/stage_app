@@ -1,14 +1,14 @@
 <?php
 
 namespace App\EventSubscriber;
-use EasyCorp\Bundle\EasyAdminBundle\Event\EasyAdminEvents;
-use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityPersistedEvent;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Security\Core\Security;
-
+use App\Entity\User;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\EventDispatcher\GenericEvent;
+use EasyCorp\Bundle\EasyAdminBundle\Event\EasyAdminEvents;
 
-use UserBundle\Entity\User;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityPersistedEvent;
 
 class EasyAdminSubscriber implements EventSubscriberInterface {
 

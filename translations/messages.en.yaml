@@ -1,3 +1,10 @@
+ROLE_USER: Users
+ROLE_APOGE: APOGE
+ROLE_ADMIN: Administrator
+ROLE_PROF: Teacher
+ROLE_ETUDIANT: Student
+ROLE_CHEF: Sector Admin
+
 Etudiants: Students
 Filieres: Sectors
 Users: Users
