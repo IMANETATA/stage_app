@@ -75,7 +75,6 @@ class Module
     public function setFiliere(?filiere $filiere): self
     {
         $this->filiere = $filiere;
-
         return $this;
     }
 
@@ -87,7 +86,6 @@ class Module
     public function setSemestre(?semestre $semestre): self
     {
         $this->semestre = $semestre;
-
         return $this;
     }
 
@@ -120,4 +118,8 @@ class Module
 
         return $this;
     }
+    public function __toString()
+{
+    return $this->getNom(); // Assuming 'nom' is the property that represents the name of the module
+}
 }

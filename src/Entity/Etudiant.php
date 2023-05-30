@@ -18,16 +18,16 @@ class Etudiant
     protected int $id ;
 
     #[ORM\Column(length: 50)]
-    private ?string $nom = null;
+    private ?string $nom ;
 
     #[ORM\Column(length: 50)]
-    private ?string $prenom = null;
+    private ?string $prenom;
 
     #[ORM\Column(length: 30)]
-    private ?string $cne = null;
+    private ?string $cne ;
 
     #[ORM\Column(length: 255)]
-    private ?string $adresse = null;
+    private ?string $adresse ;
 
     #[ORM\OneToMany(mappedBy: 'etudiant', targetEntity: Note::class)]
     private Collection $notes;
@@ -130,4 +130,8 @@ class Etudiant
     {
         $this->id = $id;
     }
+    public function __toString()
+{
+    return $this->getNom() . ' ' . $this->getPrenom();
+}
 }
