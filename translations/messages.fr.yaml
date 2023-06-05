@@ -11,7 +11,7 @@ Users: Utilisateurs
 Etudiant: Etudiant
 Filiere: Filière
 User: Utilisateur
-Dashboard: Gestion des examens
+Dashboard: Gestion des notes
 security:
   reset-password: Récupérer le mot de passe
   forgetten-password: Mot de passe oublié

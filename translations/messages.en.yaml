@@ -11,7 +11,7 @@ Users: Users
 Etudiant: Student
 Filiere: Sector
 User: User
-Dashboard: Exams Management
+Dashboard: Notes Management
 security:
   reset-password: Reset Password
   forgetten-password: I forget my password 

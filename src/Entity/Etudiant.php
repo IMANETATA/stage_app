@@ -14,7 +14,7 @@ class Etudiant
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[assert\NotNull()]
+  //  #[assert\NotNull()]
     protected int $id ;
 
     #[ORM\Column(length: 50)]

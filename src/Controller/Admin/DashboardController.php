@@ -81,7 +81,6 @@ class DashboardController extends AbstractDashboardController
     {
         return Assets::new()->addCssFile('build/css/admin.css');
     }
-
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
@@ -90,6 +89,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Filiere', 'fas fa-list', Filiere::class);
 
         if($this->current_role == "ROLE_ADMIN" ){
+            
         yield MenuItem::linkToCrud('Semestre', 'fas fa-list', Semestre::class);
         }
 
@@ -99,6 +99,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Note', 'fas fa-list', Note::class);
 
         if($this->current_role == "ROLE_ADMIN" ){
+
         yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
         }
     }
