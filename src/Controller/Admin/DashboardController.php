@@ -81,6 +81,37 @@ class DashboardController extends AbstractDashboardController
     {
         return Assets::new()->addCssFile('build/css/admin.css');
     }
+
+    public function configureMenuItems(): iterable
+    {
+        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+    
+        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        if ($this->current_role === "ROLE_ADMIN" || $this->current_role === "ROLE_PROF")
+        yield MenuItem::linkToCrud('Filiere', 'fas fa-list', Filiere::class);
+
+        yield MenuItem::linkToCrud('Semestre', 'fas fa-list', Semestre::class);
+        
+        if ($this->current_role === "ROLE_ADMIN" || $this->current_role === "ROLE_PROF") {
+           
+            yield MenuItem::linkToCrud('Etudiant', 'fas fa-list', Etudiant::class);}
+            if ($this->current_role === "ROLE_ADMIN" || $this->current_role === "ROLE_PROF"|| $this->current_role === "ROLE_ETUDIANT"){
+            yield MenuItem::linkToCrud('Note', 'fas fa-list', Note::class);
+        }
+    
+        if ($this->current_role === "ROLE_ADMIN" || $this->current_role === "ROLE_ETUDIANT" || $this->current_role === "ROLE_PROF") {
+            yield MenuItem::linkToCrud('Module', 'fas fa-list', Module::class);
+        }
+    
+        if ($this->current_role === "ROLE_ADMIN") {
+            yield MenuItem::linkToCrud('Enseignant', 'fas fa-list', Enseignant::class);
+            yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
+        }
+    }
+    
+    
+
+/*
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
@@ -102,5 +133,5 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
         }
-    }
+    }*/
 }
