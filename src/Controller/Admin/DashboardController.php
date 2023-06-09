@@ -33,12 +33,8 @@ class DashboardController extends AbstractDashboardController
         $first_role = $security->getUser()->getRoles()[0];
         if($this->rs->getSession()->get('_role')==null)
             $this->rs->getSession()->set('_role', $first_role);
-  
         $this->current_role = $this->rs->getSession()->get('_role');
     }
-
-
-
 
     #[Route('/admin', name: 'dashboard')]
     public function index(): Response
