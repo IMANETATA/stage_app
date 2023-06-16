@@ -18,7 +18,7 @@
     --width-xxl: 1400px;
     --body-max-width: 1440px;
     --body-bg: var(--white);
-    --responsive-header-bg: var(--gray-50);
+    --responsive-header-bg: #87CEEB;
     --responsive-header-border-color: var(--gray-200);
     --responsive-header-logo-color: var(--gray-800);
     --responsive-table-label-color: var(--gray-500);
